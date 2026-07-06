@@ -173,6 +173,22 @@
   .meta { font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); margin-top: 14px; }
   .meta b { color: var(--ink-dim); font-weight: 500; }
 
+  /* ---------- CLIENT WORK ---------- */
+  .clients { display: grid; gap: 10px; }
+  .client {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 22px; transition: transform .18s ease, border-color .2s, background .2s;
+  }
+  .client:hover { transform: translateX(4px); border-color: var(--ink-faint); background: var(--bg-soft); }
+  .client:hover .client-link { color: var(--signal); }
+  .client-name { font-size: 1.08rem; font-weight: 600; letter-spacing: -0.01em; }
+  .client-link { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink-faint); transition: color .2s; white-space: nowrap; }
+  .client-link svg { width: 14px; height: 14px; }
+  @media (max-width: 520px) {
+    .client { flex-direction: column; align-items: flex-start; gap: 6px; }
+  }
+
   /* ---------- STACK / SKILLS ---------- */
   .chips { display: flex; flex-wrap: wrap; gap: 9px; }
   .chip {
@@ -218,6 +234,7 @@
     <a href="#top" class="brand">wael<span class="dot">.</span>alzoubi</a>
     <div class="nav-links">
       <a href="#work">work</a>
+      <a href="#clients">clients</a>
       <a href="#stack">stack</a>
       <a href="#contact">contact</a>
     </div>
@@ -327,24 +344,33 @@
         <div class="meta"><b>Gate-level design</b> · NAND → ALU → instruction execution</div>
       </a>
 
-      <!-- Web -->
-      <a class="card reveal" style="--layer: #a78bfa" href="https://github.com/Waelalzoub1/premier-locksmith-website" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="layer-tag">L6 · product</span>
-          <h3>Premier Locksmith — production site</h3>
-          <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
-        </div>
-        <p>
-          A real, shipped website for a <b>paying freelance client</b> — a refactored static site with a proper
-          build pipeline. Where the low-level curiosity turns into software people actually use and pay for.
-        </p>
-        <div class="tags">
-          <span class="tag">HTML</span><span class="tag">JavaScript</span>
-          <span class="tag">CSS</span><span class="tag">Build pipeline</span>
-        </div>
-        <div class="meta"><b>Freelance</b> · production &amp; delivered</div>
-      </a>
+    </div>
+  </div>
+</section>
 
+<section id="clients">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">02</span>
+      <h2>Client work</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="stack-note reveal">
+      Production sites shipped for paying clients — designed, built, and hosted. All live right now.
+    </p>
+    <div class="clients reveal">
+      <a class="client" href="https://premierlocksmithservices.com" target="_blank" rel="noopener">
+        <span class="client-name">Premier Locksmith Services</span>
+        <span class="client-link mono">premierlocksmithservices.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
+      </a>
+      <a class="client" href="https://misotech.us" target="_blank" rel="noopener">
+        <span class="client-name">MISO Technology</span>
+        <span class="client-link mono">misotech.us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
+      </a>
+      <a class="client" href="https://westphillylockout.com" target="_blank" rel="noopener">
+        <span class="client-name">Infinity Lock Out — West Philadelphia</span>
+        <span class="client-link mono">westphillylockout.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
@@ -352,7 +378,7 @@
 <section id="stack">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="idx">02</span>
+      <span class="idx">03</span>
       <h2>The stack</h2>
       <span class="rule"></span>
     </div>
