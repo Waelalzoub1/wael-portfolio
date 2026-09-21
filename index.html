@@ -301,15 +301,15 @@
           <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
         </div>
         <p>
-          An <b>AlphaZero-style chess agent</b>: PUCT Monte Carlo Tree Search guided by a residual policy/value
-          network, parallel self-play workers, a live board to watch it train. Measured honestly against a random
-          baseline — the README says what it reaches and what it doesn't.
+          An <b>AlphaZero-style chess agent</b>: batched GPU Monte Carlo Tree Search guided by a residual
+          policy/value network, trained purely by self-play. It never saw either baseline in training and scores
+          <b>0.98 against a random mover</b> (381 wins, 19 draws, 0 losses) and 0.70 against a greedy-capture player.
         </p>
         <div class="tags">
           <span class="tag">MCTS</span><span class="tag">Self-play</span>
-          <span class="tag">PyTorch</span><span class="tag">2.4M params</span>
+          <span class="tag">PyTorch</span><span class="tag">3.1M params</span>
         </div>
-        <div class="meta"><b>python-chess</b> · 17×8×8 state planes · 4096-move policy · seeded runs and ablations</div>
+        <div class="meta"><b>13,440 self-play games</b> in 101 min on an RTX 5080 · 17×8×8 state planes · 4096-move policy</div>
       </a>
 
       <!-- OS -->
